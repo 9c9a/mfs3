@@ -1,5 +1,5 @@
 classdef ReturnLinkMap < multibeam.internal.AbstractLandareasMap
-%ReturnLinkMap Map of multibeam FSS return link budget
+%RETURNLINKMAP Map of multibeam FSS return link budget
 
     properties
         % uicontrol selections

@@ -1,5 +1,5 @@
 classdef (Abstract) AbstractLandareasMap < multibeam.internal.AbstractMap
-%LANDAREASMAP 2D landareas map for assistance in multibeam FSS planning
+%ABSTRACTLANDAREASMAP 2D landareas map for assistance in multibeam FSS planning
     
     properties (SetAccess = private)
         hL % overlay handle

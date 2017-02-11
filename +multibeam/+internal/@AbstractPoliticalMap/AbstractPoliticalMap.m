@@ -1,5 +1,5 @@
 classdef (Abstract) AbstractPoliticalMap < multibeam.internal.AbstractMap
-%POLITICALMAP 2D political map for assistance in multibeam FSS planning
+%ABSTRACTPOLITICALMAP 2D political map for assistance in multibeam FSS planning
     
     properties (SetAccess = private)
         hL % overlay handle

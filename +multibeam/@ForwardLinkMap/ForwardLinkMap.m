@@ -1,5 +1,5 @@
 classdef ForwardLinkMap < multibeam.internal.AbstractLandareasMap
-%ForwardLinkMap Map of multibeam FSS forward link budget
+%FORWARDLINKMAP Map of multibeam FSS forward link budget
 
     properties
         % uicontrol selections
