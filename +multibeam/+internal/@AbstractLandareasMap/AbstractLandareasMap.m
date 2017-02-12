@@ -1,5 +1,7 @@
 classdef (Abstract) AbstractLandareasMap < multibeam.internal.AbstractMap
-%ABSTRACTLANDAREASMAP 2D landareas map for assistance in multibeam FSS planning
+%ABSTRACTLANDAREASMAP Base regional 2D map with coastlines and landforms
+% Base abstract class that provides common functions for initializing a UI 
+% window and drawing a map with continental coastlines and landforms.
     
     properties (SetAccess = private)
         hL % overlay handle

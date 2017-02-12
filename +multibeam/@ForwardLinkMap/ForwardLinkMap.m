@@ -1,5 +1,9 @@
 classdef ForwardLinkMap < multibeam.internal.AbstractLandareasMap
 %FORWARDLINKMAP Map of multibeam FSS forward link budget
+% Map of different parameters relevant to the forward link budget, such as 
+% carrier-to-noise, carrier-to-interference and carrier-to-intermodulation 
+% ratios. Three possible scenarios can be selected: clear sky, rain in uplink 
+% and rain in downlink.
 
     properties
         % uicontrol selections

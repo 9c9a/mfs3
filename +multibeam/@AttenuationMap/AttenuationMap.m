@@ -1,5 +1,7 @@
 classdef AttenuationMap < multibeam.internal.AbstractLandareasMap
 %ATTENUATIONMAP Map of multibeam FSS attenuation
+% Map of different types of ITU-R attenuations (rain, cloud & fog, …). Multiple 
+% probabilities can be selected through the UI.
 
     properties
         % uicontrol selections

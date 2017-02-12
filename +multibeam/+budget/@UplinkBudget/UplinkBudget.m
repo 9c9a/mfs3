@@ -1,5 +1,6 @@
 classdef UplinkBudget < multibeam.budget.LinkBudget
 %UPLINKBUDGET Multibeam FSS uplink budget calculator
+% Provides functions for calculating uplink C/N and IBO.
 
     properties
         % Ground station

@@ -1,5 +1,6 @@
 classdef DownlinkBudget < multibeam.budget.LinkBudget
 %DOWNLINKBUDGET Multibeam FSS downlink budget calculator
+% Povides functions for calculating downlink C/N, C/I, C/IM and OBO.
 
     properties
         % Satellite

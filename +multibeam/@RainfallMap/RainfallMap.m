@@ -1,5 +1,7 @@
 classdef RainfallMap < multibeam.internal.AbstractLandareasMap
 %RAINFALLMAP Map of rainfall rate, cloud water content and vapor density
+% Map of different parameters relevant to attenuation calculations. Multiple 
+% probabilities can be selected through the UI.
 
     properties
         % uicontrol selections

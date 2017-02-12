@@ -1,5 +1,10 @@
 function [ hobj ] = addPoint(this,lat0,lon0,color)
-%ADDPOINT Add a location at coordinates (lat0,lon0)
+%ADDPOINT Add a location marker at coordinates (lat0,lon0)
+% Input parameters:
+%   lat0,lon0   : Marker position [deg]
+% 	color 		: Marker color
+% Output parameters:
+%   hobj        : Graphical object handle
 
 set(0,'CurrentFigure',this.hF)
 set(this.hF,'CurrentAxes',this.hA)

@@ -1,5 +1,6 @@
 classdef FrequencyMap < multibeam.internal.AbstractLandareasMap
 %FREQUENCYMAP Map of multibeam FSS frequency reuse across user beams
+% Map of user beams grouped by assigned frequency/polarization number.
 
     properties
         radius  % beam radius [km]

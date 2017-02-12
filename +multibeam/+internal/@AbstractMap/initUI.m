@@ -1,5 +1,9 @@
 function initUI(this,name)
 %INITUI Initialize figure and axes with chosen projection
+% Input parameters:
+%   name        : Figure name or title
+% Output parameters:
+%   none
 
 % Create hidden figure
 this.hF = figure('Visible','off','Name',name);

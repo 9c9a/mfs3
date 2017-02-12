@@ -1,5 +1,12 @@
 function [ hobj ] = addCircle(this,lat0,lon0,R,color,alpha)
 %ADDCIRCLE Add a coverage circle of radius R centered at (lat0,lon0)
+% Input parameters:
+%   lat0,lon0   : Circle center [deg]
+%   R           : Circle radius [km]
+% 	color 		: Face & edge color
+% 	alpha 		: Face transparency as a scalar value between 0 and 1
+% Output parameters:
+%   hobj        : Graphical object handle
 
 set(0,'CurrentFigure',this.hF)
 set(this.hF,'CurrentAxes',this.hA)

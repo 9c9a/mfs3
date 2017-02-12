@@ -1,5 +1,7 @@
 classdef (Abstract) AbstractPoliticalMap < multibeam.internal.AbstractMap
-%ABSTRACTPOLITICALMAP 2D political map for assistance in multibeam FSS planning
+%ABSTRACTPOLITICALMAP Base regional 2D map with political borders
+% Base abstract class that provides common functions for initializing a UI 
+% window and drawing a political map with world borders.
     
     properties (SetAccess = private)
         hL % overlay handle

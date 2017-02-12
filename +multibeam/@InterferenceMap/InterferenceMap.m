@@ -1,5 +1,7 @@
 classdef InterferenceMap < multibeam.internal.AbstractLandareasMap
 %INTERFERENCEMAP Map of multibeam FSS co-channel interference
+% Map of co-channel interference across user beams, calculated from typical
+% antenna patterns for multibeam satellite systems.
 
     properties (SetAccess = protected)
         % link budget

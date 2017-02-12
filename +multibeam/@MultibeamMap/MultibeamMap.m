@@ -1,5 +1,7 @@
 classdef MultibeamMap < multibeam.internal.AbstractLandareasMap
 %MULTIBEAMMAP Map of multibeam FSS user beam allocation
+% Map of user beam center allocation and of the hexagonal cell grid that defines 
+% the theoretical area of coverage.
 
     properties
         % grid parameters

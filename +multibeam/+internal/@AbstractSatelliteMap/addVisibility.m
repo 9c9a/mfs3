@@ -1,5 +1,12 @@
 function [ hobj ] = addVisibility(this,lonS,altS,alpha)
 %ADDVISIBILITY Add satellite visibility region from Earth
+% Input parameters:
+%   lonS	    : Satellite longitude [deg]
+%   altS	    : Satellite altitude [km]
+% 	alpha 		: Face transparency as a scalar value between 0 and 1
+% Output parameters:
+%   hobj        : Graphical object handle
+
 
 set(0,'CurrentFigure',this.hF)
 set(this.hF,'CurrentAxes',this.hA)

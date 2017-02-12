@@ -1,5 +1,13 @@
 function [ hobj ] = addHexagon(this,lat0,lon0,R,phi0,color,alpha)
 %ADDHEXAGON Add a coverage hexagon of radius R centered at (lat0,lon0)
+% Input parameters:
+%   lat0,lon0   : Hexagon center [deg]
+%   R           : Hexagon maximal radius [km]
+% 	phi0		: Hexagon offset angle [deg]
+% 	color 		: Face & edge color
+% 	alpha 		: Face transparency as a scalar value between 0 and 1
+% Output parameters:
+%   hobj        : Graphical object handle
 
 set(0,'CurrentFigure',this.hF)
 set(this.hF,'CurrentAxes',this.hA)

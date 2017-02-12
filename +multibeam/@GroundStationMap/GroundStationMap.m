@@ -1,5 +1,6 @@
 classdef GroundStationMap < multibeam.internal.AbstractLandareasMap
 %GROUNDSTATIONMAP Map of multibeam FSS ground station locations
+% Map of gateway ground station locations and satellite gateway beams.
 
     properties
         radius  % beam radius [km]

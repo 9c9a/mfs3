@@ -1,5 +1,7 @@
 classdef LinkBudget
 %LINKBUDGET Multibeam FSS link budget calculator
+% Base link budget calculator that provides functions for calculating
+% attenuations and multibeam radiation patterns.
 
     properties
         % satellite coordinates

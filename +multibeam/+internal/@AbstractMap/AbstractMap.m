@@ -1,6 +1,8 @@
 classdef (Abstract) AbstractMap < handle
-%ABSTRACTMAP 2D map for assistance in multibeam FSS planning
-    
+%ABSTRACTMAP Base regional 2D map with helper functions
+% Base abstract class that provides common functions for initializing a UI 
+% window and drawing a map using the Mapping Toolbox.
+
     properties (SetAccess = protected)
         geoid   % reference ellipsoid
         proj    % map projection

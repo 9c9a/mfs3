@@ -1,6 +1,8 @@
 classdef (Abstract) AbstractSatelliteMap < multibeam.internal.AbstractMap
-%ABSTRACTSATELLITEMAP 2D satellite map for assistance in multibeam FSS planning
-    
+%ABSTRACTSATELLITEMAP Base regional 2D map with satellite images
+% Base abstract class that provides common functions for initializing a UI 
+% window and drawing a map with satellite images from NASA's "Blue Marble".    
+
     properties (SetAccess = private)
         hL % overlay handle
     end

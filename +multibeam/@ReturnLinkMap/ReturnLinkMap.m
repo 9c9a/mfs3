@@ -1,5 +1,8 @@
 classdef ReturnLinkMap < multibeam.internal.AbstractLandareasMap
 %RETURNLINKMAP Map of multibeam FSS return link budget
+% Map of different parameters relevant to the return link budget, such as 
+% carrier-to-noise and carrier-to-intermodulation ratios. Three possible 
+% scenarios can be selected: clear sky, rain in uplink and rain in downlink.
 
     properties
         % uicontrol selections

@@ -1,5 +1,6 @@
 classdef GatewayMap < multibeam.internal.AbstractLandareasMap
 %GATEWAYMAP Map of multibeam FSS beam-to-gateway allocation
+% Map of user beams grouped by allocated gateway number.
 
     properties
         radius  % beam radius [km]
