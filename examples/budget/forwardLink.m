@@ -23,8 +23,8 @@ step = 0.5;     % [deg]
 latLimit = [30 70];  % [deg]
 lonLimit = [-25 55]; % [deg]
 
-tblGrid = multibeam.geogrid(lonS,altS,step,latLimit,lonLimit);
-tblGrid = multibeam.assign(tblGrid,tblBeams);
+tblGrid = mfs3.geogrid(lonS,altS,step,latLimit,lonLimit);
+tblGrid = mfs3.assign(tblGrid,tblBeams);
 
 %% Uplink
 UL = struct();
@@ -57,5 +57,5 @@ DL.B         = 50;    % [MHz]
 DL.Nc        = 4;     % [carriers]
 
 %% Link budget
-MapFL = multibeam.ForwardLinkMap(lonS,altS,UL,DL,tblGrid,tblBeams,tblStations);
+MapFL = mfs3.ForwardLinkMap(lonS,altS,UL,DL,tblGrid,tblBeams,tblStations);
 MapFL.draw()

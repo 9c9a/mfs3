@@ -18,9 +18,9 @@ tblBeams = readtable(fullfile(pathB,fileB),'Sheet',sheet);
 tblStations = readtable(fullfile(pathS,fileS),'Sheet',sheet);
 
 %% Gateway ground station locations
-MapS = multibeam.GroundStationMap(radius,tblStations);
+MapS = mfs3.GroundStationMap(radius,tblStations);
 MapS.draw()
 
 %% Allocation of beams to gateways
-MapG = multibeam.GatewayMap(radius,tblBeams,tblStations); 
+MapG = mfs3.GatewayMap(radius,tblBeams,tblStations); 
 MapG.draw()

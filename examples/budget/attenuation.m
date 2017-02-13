@@ -18,8 +18,8 @@ step = 0.5;   % [deg]
 latLimit = [30 70];  % [deg]
 lonLimit = [-25 55]; % [deg]
 
-tblGrid = multibeam.geogrid(lonS,altS,step,latLimit,lonLimit);
+tblGrid = mfs3.geogrid(lonS,altS,step,latLimit,lonLimit);
 
 %% Attenuation
-MapA = multibeam.AttenuationMap(lonS,altS,freq,tblGrid);
+MapA = mfs3.AttenuationMap(lonS,altS,freq,tblGrid);
 MapA.draw()

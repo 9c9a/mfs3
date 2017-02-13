@@ -25,13 +25,13 @@ step = 0.5;     % [deg]
 latLimit = [30 70];  % [deg]
 lonLimit = [-25 55]; % [deg]
 
-tblGrid = multibeam.geogrid(lonS,altS,step,latLimit,lonLimit);
-tblGrid = multibeam.assign(tblGrid,tblBeams);
+tblGrid = mfs3.geogrid(lonS,altS,step,latLimit,lonLimit);
+tblGrid = mfs3.assign(tblGrid,tblBeams);
 
 %% Association of beams to grid points
-MapG = multibeam.GeogridMap(lonS,altS,radius,tilt,thetaB,tblGrid,tblBeams);
+MapG = mfs3.GeogridMap(lonS,altS,radius,tilt,thetaB,tblGrid,tblBeams);
 MapG.draw()
 
 %% Co-channel interference
-MapI = multibeam.InterferenceMap(lonS,altS,thetaB,tblGrid,tblBeams);
+MapI = mfs3.InterferenceMap(lonS,altS,thetaB,tblGrid,tblBeams);
 MapI.draw()
