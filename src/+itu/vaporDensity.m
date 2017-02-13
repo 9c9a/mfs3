@@ -7,6 +7,14 @@ function [ rho ] = vaporDensity(lat,lon,p)
 %   p           : Percentage of an average year [%]
 % Output parameters:
 %   rho         : Surface water vapour density [g/m^3]
+%
+% Note:
+%   The function automatically loads meteorological input parameters 
+%   required by Rec. ITU-R P.836-5 from the following files:
+%       LAT1dot125.txt 	: latitudes of grid points (90:-1.125:-90) [deg]
+%       LON1dot125.txt  : longitudes of grid points (0:1.125:360) [deg]
+% 	and, according to the specified percentage of an average year, from:
+%       RHO_XX_v4.txt   : surface water vapour density [g/m^3]
 
 
 %% Reshape coordinates into grid

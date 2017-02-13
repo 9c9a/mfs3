@@ -1,9 +1,16 @@
 function [ hR ] = rainHeight(lat,lon)
 %RAINHEIGHT Yearly average rain height above sea level (ITU-R P.839-4)
 % Input parameters:
-%   lat,lon     : Ground station coordinates [deg]
+% 	lat,lon     : Ground station coordinates [deg]
 % Output parameters:
 %   hR          : Mean annual rain height above mean sea level [km]
+%
+% Note:
+%   The function automatically loads meteorological input parameters 
+%   required by Rec. ITU-R P.839-4 from the following files:
+% 		lat.txt : latitudes of grid points (90:-1.5:-90) [deg]
+%       Lon.txt : longitudes of grid points (0:1.5:360) [deg]
+%       h0.txt 	: mean annual 0°C isotherm height [km]
 
 
 %% Reshape coordinates into grid

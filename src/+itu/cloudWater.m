@@ -7,6 +7,14 @@ function [ Lred ] = cloudWater(lat,lon,p)
 %   p           : Percentage of an average year [%]
 % Output parameters:
 %   Lred        : Reduced cloud liquid water content [kg/m^2]
+%
+% Note:
+%   The function automatically loads meteorological input parameters 
+%   required by Rec. ITU-R P.840-6 from the following files:
+%       ESALAT1dot125.TXT 	: latitudes of grid points (90:-1.125:-90) [deg]
+%       ESALON1dot125.TXT 	: longitudes of grid points (0:1.125:360) [deg]
+% 	and, according to the specified percentage of an average year, from:
+%       Lred_XX_v4.txt      : reduced cloud water liquid content [kg/m^2]
 
 
 %% Reshape coordinates into grid

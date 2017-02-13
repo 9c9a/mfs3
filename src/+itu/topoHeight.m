@@ -4,6 +4,14 @@ function [ alt ] = topoHeight(lat,lon)
 %   lat,lon     : Ground station coordinates [deg]
 % Output parameters:
 %   alt         : Topographical height above mean sea level [km]
+%
+% Note:
+%   The function automatically loads meteorological input parameters 
+%   required by Rec. ITU-R P.1511-1 from the following files:
+%       TOPOLAT.TXT 	: latitudes of grid points (90:0.5:-90) [deg]
+%       TOPOLON.TXT 	: longitudes of grid points (0:0.5:360) [deg]
+% 	and, according to the specified percentage of an average year, from:
+%       TOPO_0DOT5.txt 	: topographical height above mean sea level [km]
 
 
 %% Reshape coordinates into grid
