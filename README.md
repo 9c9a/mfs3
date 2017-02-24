@@ -17,3 +17,5 @@ This software was developed as part of a course in Satellite Communications at t
 
 ## License
 mfs3 is open-sourced software licensed under the [MIT License](http://opensource.org/licenses/MIT). For the full copyright and license information, please view the [LICENSE](LICENSE) file that is distributed with this source code.
+
+This software package contains source code and data provided by the [ITU-R Radiowave Propagation Study Group (SG 3)](http://www.itu.int/en/ITU-R/study-groups/rsg3/Pages/iono-tropo-spheric.aspx).
