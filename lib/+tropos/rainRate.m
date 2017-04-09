@@ -32,7 +32,7 @@ lon = reshape(lon,Ny,Nx);
 lon(lon<0) = lon(lon<0)+360;
 
 %% Import ITU-R P.837-5 parameters
-pathname = '+itu/R-REC-P.837-5';
+pathname = '+tropos/R-REC-P.837-5';
 
 % Grid longitude and latitude points
 lat_e40 = dlmread(fullfile(pathname,'ESARAIN_LAT_v5.txt'));

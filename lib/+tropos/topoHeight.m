@@ -26,7 +26,7 @@ lon = reshape(lon,Ny,Nx);
 lon(lon<0) = lon(lon<0)+360;
 
 %% Import ITU-R P.1511-1 maps
-pathname = '+itu/R-REC-P.1511-1';
+pathname = '+tropos/R-REC-P.1511-1';
 
 % Grid longitude and latitude points [deg]
 lat0 = dlmread(fullfile(pathname,'TOPOLAT.txt'));

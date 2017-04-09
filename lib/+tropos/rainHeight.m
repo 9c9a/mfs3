@@ -25,7 +25,7 @@ lon = reshape(lon,Ny,Nx);
 lon(lon<0) = lon(lon<0)+360;
 
 %% Import ITU-R P.839-4 maps
-pathname = '+itu/R-REC-P.839-4';
+pathname = '+tropos/R-REC-P.839-4';
 
 % Grid longitude and latitude points [deg]
 lat0 = dlmread(fullfile(pathname,'LAT.txt'));

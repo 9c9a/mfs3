@@ -16,11 +16,11 @@ att = nan(size(lat)); % [dB]
 % Effective radius of the Earth
 Re = 8500; % [km]
 % Ground station height above sea level (ITU-R P.1511)
-hs = itu.topoHeight(lat,lon); % [km]
+hs = tropos.topoHeight(lat,lon); % [km]
 %hs = zeros(size(lat))+0.5; % [km]
 
 %% Step 1: Rain height
-hr = itu.rainHeight(lat,lon); % [km]
+hr = tropos.rainHeight(lat,lon); % [km]
 
 %% Step 2: Slant-path length
 % If hr–hs is less than or equal to zero, the predicted rain attenuation 
@@ -44,7 +44,7 @@ end
 Lg = Ls.*cosd(elev); % [km]
 
 %% Step 4: Rainfall rate exceeded for p% of an average year
-RR = itu.rainRate(lat,lon,p); % [mm/h]
+RR = tropos.rainRate(lat,lon,p); % [mm/h]
 % If RR is equal to zero, the predicted rain attenuation is zero
 att(RR == 0) = 0;
 
@@ -52,7 +52,7 @@ att(RR == 0) = 0;
 % Polarization tilt angle [deg]
 tau = 45; % circular polarization
 % ITU-R P.838-3
-gammaR = itu.rainGamma(freq,elev,RR,tau); % [dB/km]
+gammaR = tropos.rainGamma(freq,elev,RR,tau); % [dB/km]
 
 %% Step 6: Horizontal reduction factor
 rP = 1./(1 + 0.78*sqrt((Lg.*gammaR)/freq) - 0.38*(1-exp(-2*Lg)));

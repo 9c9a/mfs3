@@ -30,7 +30,7 @@ eta = (2+ep)/es;
 Kl = (0.819*freq)/(es*(1+eta^2)); % (dB/km)
 
 %% Step 2: Reduced cloud liquid water content
-Lred = itu.cloudWater(lat,lon,p); % (g/m^3)
+Lred = tropos.cloudWater(lat,lon,p); % (g/m^3)
 
 %% Step 3: Cloud attenuation along slant paths
 att = Lred*Kl./sind(elev);

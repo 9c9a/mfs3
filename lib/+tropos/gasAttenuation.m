@@ -9,14 +9,14 @@ function [ att ] = gasAttenuation(freq,lat,lon,elev,p)
 %   att         : Attenuation [dB]
 
 % Ground station height above sea level (ITU-R P.1511)
-hs = itu.topoHeight(lat,lon); % [km]
+hs = tropos.topoHeight(lat,lon); % [km]
 
 %% Specific attenuations
 % Specific attenuation due to dry air [dB/km]
 gamma0 = (7.1./(freq.^2+0.36) + 4.5./((freq-57).^2 + 0.98)).*freq.^2*1e-3; 
 
 % Surface water vapour density [g/m^3]
-pw = itu.vaporDensity(lat,lon,p);
+pw = tropos.vaporDensity(lat,lon,p);
 % Specific attenuation due to water vapour [dB/km]
 gammaw = (0.067 + 3./((freq-22.3).^2 + 7.3)).*pw.*freq.^2*1e-4;
 

@@ -29,7 +29,7 @@ lon = reshape(lon,Ny,Nx);
 lon(lon<0) = lon(lon<0)+360;
 
 %% Import ITU-R P.840-6 maps
-pathname = '+itu/R-REC-P.840-6';
+pathname = '+tropos/R-REC-P.840-6';
 
 switch p
     case {0.1,0.2,0.3,0.5} % 0.1
