@@ -32,16 +32,17 @@ lon = reshape(lon,Ny,Nx);
 lon(lon<0) = lon(lon<0)+360;
 
 %% Import ITU-R P.837-5 parameters
-pathname = '+tropos/R-REC-P.837-5';
+[pathstr,~,~] = fileparts(mfilename('fullpath'));
+folder = 'R-REC-P.837-5';
 
 % Grid longitude and latitude points
-lat_e40 = dlmread(fullfile(pathname,'ESARAIN_LAT_v5.txt'));
-lon_e40 = dlmread(fullfile(pathname,'ESARAIN_LON_v5.txt'));
+lat_e40 = dlmread(fullfile(pathstr,folder,'ESARAIN_LAT_v5.txt'));
+lon_e40 = dlmread(fullfile(pathstr,folder,'ESARAIN_LON_v5.txt'));
 
 % Input metereological parameters
-mt      = dlmread(fullfile(pathname,'ESARAIN_MT_v5.txt'));
-beta    = dlmread(fullfile(pathname,'ESARAIN_BETA_v5.txt'));
-pr6     = dlmread(fullfile(pathname,'ESARAIN_PR6_v5.txt'));
+mt      = dlmread(fullfile(pathstr,folder,'ESARAIN_MT_v5.txt'));
+beta    = dlmread(fullfile(pathstr,folder,'ESARAIN_BETA_v5.txt'));
+pr6     = dlmread(fullfile(pathstr,folder,'ESARAIN_PR6_v5.txt'));
 
 %% Rainfall rate exceeded for p%
 % Bi-linear interpolation of parameters

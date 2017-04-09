@@ -26,13 +26,14 @@ lon = reshape(lon,Ny,Nx);
 lon(lon<0) = lon(lon<0)+360;
 
 %% Import ITU-R P.1511-1 maps
-pathname = '+tropos/R-REC-P.1511-1';
+[pathstr,~,~] = fileparts(mfilename('fullpath'));
+folder = 'R-REC-P.1511-1';
 
 % Grid longitude and latitude points [deg]
-lat0 = dlmread(fullfile(pathname,'TOPOLAT.txt'));
-lon0 = dlmread(fullfile(pathname,'TOPOLON.txt'));
+lat0 = dlmread(fullfile(pathstr,folder,'TOPOLAT.txt'));
+lon0 = dlmread(fullfile(pathstr,folder,'TOPOLON.txt'));
 % Topographical height above mean sea level [km]
-data = dlmread(fullfile(pathname,'TOPO_0DOT5.txt'));
+data = dlmread(fullfile(pathstr,folder,'TOPO_0DOT5.txt'));
 
 % Ignore first and last rows/columns, they are suppossed to help with
 % bicubic interpolation but interp2() expects a uniform grid

@@ -25,13 +25,14 @@ lon = reshape(lon,Ny,Nx);
 lon(lon<0) = lon(lon<0)+360;
 
 %% Import ITU-R P.839-4 maps
-pathname = '+tropos/R-REC-P.839-4';
+[pathstr,~,~] = fileparts(mfilename('fullpath'));
+folder = 'R-REC-P.839-4';
 
 % Grid longitude and latitude points [deg]
-lat0 = dlmread(fullfile(pathname,'LAT.txt'));
-lon0 = dlmread(fullfile(pathname,'LON.txt'));
+lat0 = dlmread(fullfile(pathstr,folder,'LAT.txt'));
+lon0 = dlmread(fullfile(pathstr,folder,'LON.txt'));
 % Mean annual 0°C isotherm height above mean sea level [km]
-data = dlmread(fullfile(pathname,'h0.txt'));
+data = dlmread(fullfile(pathstr,folder,'h0.txt'));
 
 %% Interpolate at (lat,lon)
 % Bilinear interpolation of data
