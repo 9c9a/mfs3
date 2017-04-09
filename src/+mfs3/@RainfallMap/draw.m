@@ -11,13 +11,13 @@ p = this.probability;
 % Values exceeded for p% of an average year
 switch this.option
     case 'rainfall'
-        data = itu.rainRate(lat,lon,p);
+        data = tropos.rainRate(lat,lon,p);
         unit = 'Rate (mm/h)';
     case 'cloudwater'
-        data = itu.cloudWater(lat,lon,p);
+        data = tropos.cloudWater(lat,lon,p);
         unit = 'Content (kg/m^2)';
     case 'vapor'
-        data = itu.vaporDensity(lat,lon,p);
+        data = tropos.vaporDensity(lat,lon,p);
         unit = 'Density (g/m^3)';
 end
 

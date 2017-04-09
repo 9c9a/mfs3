@@ -13,19 +13,19 @@ function [ att ] = attenuation(this,cond,lat,lon,elev,range,p)
 freq = this.freq;
 
 % Attenuation due to free-space path loss
-attF = itu.freeSpaceLoss(freq,range);
+attF = tropos.freeSpaceLoss(freq,range);
 % Attenuation due to atmospheric gasses
-attG = itu.gasAttenuation(freq,lat,lon,elev,p);
+attG = tropos.gasAttenuation(freq,lat,lon,elev,p);
 
 switch lower(cond)
     case 'clearsky'
         % Attenuation due to clouds and fog
-        attC = itu.cloudAttenuation(freq,lat,lon,elev,p);
+        attC = tropos.cloudAttenuation(freq,lat,lon,elev,p);
         att = attF+attG+attC;
     case 'rain'
         % Attenuation due to rainfall
         % Cloud and fog attenuation are already considered
-        attR = itu.rainAttenuation(freq,lat,lon,elev,p);
+        attR = tropos.rainAttenuation(freq,lat,lon,elev,p);
         att = attF+attG+attR;
     otherwise
         error('Unknown sky conditions ''%s''',cond)

@@ -15,13 +15,13 @@ p = this.probability;
 % Values exceeded for p% of an average year
 switch this.option
     case 'rain' % Attenuation due to rainfall
-        data = itu.rainAttenuation(this.freq,lat,lon,elev,p);
+        data = tropos.rainAttenuation(this.freq,lat,lon,elev,p);
     case 'cloud' % Attenuation due to clouds and fog
-        data = itu.cloudAttenuation(this.freq,lat,lon,elev,p);
+        data = tropos.cloudAttenuation(this.freq,lat,lon,elev,p);
     case 'gas' % Attenuation due to atmospheric gasses
-        data = itu.gasAttenuation(this.freq,lat,lon,elev,p);
+        data = tropos.gasAttenuation(this.freq,lat,lon,elev,p);
     case 'freespace' % Attenuation due to FSL
-        data = itu.freeSpaceLoss(this.freq,rang);
+        data = tropos.freeSpaceLoss(this.freq,rang);
 end
 
 %% Clear map before redrawing

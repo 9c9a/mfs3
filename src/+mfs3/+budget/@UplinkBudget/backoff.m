@@ -11,7 +11,7 @@ function [ IBO ] = backoff(this,cond,lat,lon,elev,p)
 switch lower(cond)
     case 'rain'
         % Rain attenuation
-        attR = itu.rainAttenuation(this.freq,lat,lon,elev,p);
+        attR = tropos.rainAttenuation(this.freq,lat,lon,elev,p);
         % Compensate rain attenuation up to UPC capabilities
         IBO = this.IBO - max(attR - min(this.UPC,attR), 0);
     case 'clearsky'
