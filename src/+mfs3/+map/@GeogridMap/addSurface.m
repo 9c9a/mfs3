@@ -23,7 +23,7 @@ colormap(this.hA,cmap)
 
 %% Plot Z as a flat surface
 hobj = surfm(y,x,Z);
-uistack(hobj,'bottom')
+alpha(hobj,0.7)
 
 % Update figure before continuing execution
 drawnow limitrate nocallbacks

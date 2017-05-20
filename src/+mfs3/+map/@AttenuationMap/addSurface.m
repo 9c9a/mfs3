@@ -14,9 +14,9 @@ Z = reshape(Z,Ny,Nx);
 
 %% Plot Z as a flat surface
 hobj = surfm(y,x,Z);
-uistack(hobj,'bottom')
+alpha(hobj,0.8)
 
-% Color bar for contour plots
+% Color bar for surface plots
 hbar = colorbar(this.hA,'Location','EastOutside');
 % Update figure before continuing execution
 drawnow limitrate nocallbacks

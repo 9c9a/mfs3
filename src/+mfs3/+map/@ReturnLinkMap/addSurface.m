@@ -22,13 +22,13 @@ end
 
 %% Plot Z as a flat surface
 hobj = surfm(y,x,Z);
-uistack(hobj,'bottom')
+alpha(hobj,0.7)
 
 % Limit dynamic range to ignore noise introduced by multibeam side lobes
 % outside our coverage region
 caxis([max(-20,floor(min(Z(:)))),ceil(max(Z(:)))])
 
-% Color bar for contour plots
+% Color bar for surface plots
 hbar = colorbar(this.hA,'Location','EastOutside');
 % Update figure before continuing execution
 drawnow limitrate nocallbacks

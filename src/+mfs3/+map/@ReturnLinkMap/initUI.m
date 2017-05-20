@@ -3,8 +3,6 @@ function initUI(this,name)
 
 % Initialize UI using call superclass method
 initUI@mfs3.map.AbstractLandareasMap(this,name)
-% Change landareas color to improve visibility
-set(this.hL.Children,'FaceAlpha',0,'EdgeColor','k')
 
 %% Create uipanel
 % Allows repositioning uicontrols together on resizeUI() calls
