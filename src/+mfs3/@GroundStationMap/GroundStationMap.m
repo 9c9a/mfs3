@@ -21,7 +21,7 @@ classdef GroundStationMap < mfs3.AbstractLandareasMap
             % Gateway beam radius on Earth's surface
             this.radius = radius;
             % Read color palette
-            this.palette = csvread('palette.csv')*1/255;
+            this.readPalette();
             
             % Ground station information table
             names = {'Number','City','Lat','Lon'};
@@ -32,6 +32,11 @@ classdef GroundStationMap < mfs3.AbstractLandareasMap
             % Enable figure
             set(this.hF,'Visible','on')
         end
+    end
+    
+    methods (Access = protected)
+        % Protected method signatures
+        readPalette(this,filename)
     end
 
 end

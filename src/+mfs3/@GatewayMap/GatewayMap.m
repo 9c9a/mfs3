@@ -14,15 +14,14 @@ classdef GatewayMap < mfs3.AbstractLandareasMap
     methods
         function this = GatewayMap(radius,tblBeams,tblStations)
             % Initialize superclass
-            this = this@mfs3.AbstractLandareasMap(...
-                'mercator','europe1');
+            this = this@mfs3.AbstractLandareasMap('mercator','europe1');
             % Initialize figure and axes
             this.initUI('User Beam to Gateway Allocation Map')
             
             % User beam radius on Earth's surface
             this.radius = radius;
             % Read color palette
-            this.palette = csvread('palette.csv')*1/255;
+            this.readPalette();
             
             % User beam information table
             names = {'Number','Lat','Lon','Gateway'};
@@ -36,6 +35,12 @@ classdef GatewayMap < mfs3.AbstractLandareasMap
             % Enable figure
             set(this.hF,'Visible','on')
         end
+    end
+    
+    methods (Access = protected)
+        % Protected method signatures
+        [idB,hC,hT] = addGateway(this,gate,color,alpha)
+        readPalette(this,filename)
     end
 
 end
