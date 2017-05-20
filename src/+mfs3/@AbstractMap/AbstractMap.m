@@ -41,6 +41,7 @@ classdef (Abstract) AbstractMap < handle
         hobj = addHexagon(this,lat0,lon0,R,phi0,color,alpha)
         hobj = addLabel(this,lat0,lon0,label,color)
         hobj = addPoint(this,lat0,lon0,color)
+        readPalette(this,filename)
         initUI(this,name)
     end
 
