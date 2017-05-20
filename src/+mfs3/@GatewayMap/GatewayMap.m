@@ -1,4 +1,4 @@
-classdef GatewayMap < mfs3.internal.AbstractLandareasMap
+classdef GatewayMap < mfs3.AbstractLandareasMap
 %GATEWAYMAP Map of multibeam FSS beam-to-gateway allocation
 % Map of user beams grouped by allocated gateway number.
 
@@ -14,7 +14,7 @@ classdef GatewayMap < mfs3.internal.AbstractLandareasMap
     methods
         function this = GatewayMap(radius,tblBeams,tblStations)
             % Initialize superclass
-            this = this@mfs3.internal.AbstractLandareasMap(...
+            this = this@mfs3.AbstractLandareasMap(...
                 'mercator','europe1');
             % Initialize figure and axes
             this.initUI('User Beam to Gateway Allocation Map')

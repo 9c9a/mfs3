@@ -1,4 +1,4 @@
-classdef MultibeamMap < mfs3.internal.AbstractLandareasMap
+classdef MultibeamMap < mfs3.AbstractLandareasMap
 %MULTIBEAMMAP Map of multibeam FSS user beam allocation
 % Map of user beam center allocation and of the hexagonal cell grid that defines 
 % the theoretical area of coverage.
@@ -16,7 +16,7 @@ classdef MultibeamMap < mfs3.internal.AbstractLandareasMap
     methods
         function this = MultibeamMap(radius,tilt,tblBeams)
             % Initialize superclass
-            this = this@mfs3.internal.AbstractLandareasMap(...
+            this = this@mfs3.AbstractLandareasMap(...
                 'mercator','europe1');
             % Initialize figure and axes
             this.initUI('User Beam Allocation Map')

@@ -1,4 +1,4 @@
-classdef RainfallMap < mfs3.internal.AbstractLandareasMap
+classdef RainfallMap < mfs3.AbstractLandareasMap
 %RAINFALLMAP Map of rainfall rate, cloud water content and vapor density
 % Map of different parameters relevant to attenuation calculations. Multiple 
 % probabilities can be selected through the UI.
@@ -28,7 +28,7 @@ classdef RainfallMap < mfs3.internal.AbstractLandareasMap
     methods
         function this = RainfallMap(tblGrid)
             % Initialize superclass
-            this = this@mfs3.internal.AbstractLandareasMap(...
+            this = this@mfs3.AbstractLandareasMap(...
                 'mercator','europe2');
             % Initialize figure and axes
             this.initUI('Rainfall, Cloud Water & Vapor Map')

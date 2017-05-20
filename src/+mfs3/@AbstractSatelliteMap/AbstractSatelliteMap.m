@@ -1,4 +1,4 @@
-classdef (Abstract) AbstractSatelliteMap < mfs3.internal.AbstractMap
+classdef (Abstract) AbstractSatelliteMap < mfs3.AbstractMap
 %ABSTRACTSATELLITEMAP Base regional 2D map with satellite images
 % Base abstract class that provides common functions for initializing a UI 
 % window and drawing a map with satellite images from NASA's "Blue Marble".    
@@ -10,7 +10,7 @@ classdef (Abstract) AbstractSatelliteMap < mfs3.internal.AbstractMap
     methods
         function this = AbstractSatelliteMap(proj,region)
             % Initialize superclass
-            this = this@mfs3.internal.AbstractMap(proj,region);w
+            this = this@mfs3.AbstractMap(proj,region);w
         end
     end
     

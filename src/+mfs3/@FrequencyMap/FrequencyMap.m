@@ -1,4 +1,4 @@
-classdef FrequencyMap < mfs3.internal.AbstractLandareasMap
+classdef FrequencyMap < mfs3.AbstractLandareasMap
 %FREQUENCYMAP Map of multibeam FSS frequency reuse across user beams
 % Map of user beams grouped by assigned frequency/polarization number.
 
@@ -13,7 +13,7 @@ classdef FrequencyMap < mfs3.internal.AbstractLandareasMap
     methods
         function this = FrequencyMap(radius,tblBeams)
             % Initialize superclass
-            this = this@mfs3.internal.AbstractLandareasMap(...
+            this = this@mfs3.AbstractLandareasMap(...
                 'mercator','europe1');
             % Initialize figure and axes
             this.initUI('Frequency Reuse Map')

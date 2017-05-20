@@ -1,4 +1,4 @@
-classdef GeogridMap < mfs3.internal.AbstractLandareasMap
+classdef GeogridMap < mfs3.AbstractLandareasMap
 %GEOGRIDMAP Coordinate grid & beam/gateway assignment map
 
     properties
@@ -34,7 +34,7 @@ classdef GeogridMap < mfs3.internal.AbstractLandareasMap
         function this = GeogridMap(...
                 lonS,altS,radius,tilt,thetaB,tblGrid,tblBeams)
             % Initialize superclass
-            this = this@mfs3.internal.AbstractLandareasMap(...
+            this = this@mfs3.AbstractLandareasMap(...
                 'mercator','europe2');
             % Initialize figure and axes
             this.initUI('Association of Beams to Grid Points Map')

@@ -1,4 +1,4 @@
-classdef ForwardLinkMap < mfs3.internal.AbstractLandareasMap
+classdef ForwardLinkMap < mfs3.AbstractLandareasMap
 %FORWARDLINKMAP Map of multibeam FSS forward link budget
 % Map of different parameters relevant to the forward link budget, such as 
 % carrier-to-noise, carrier-to-interference and carrier-to-intermodulation 
@@ -39,7 +39,7 @@ classdef ForwardLinkMap < mfs3.internal.AbstractLandareasMap
                 lonS,altS,UL,DL,tblGrid,tblBeams,tblStations)
             
             % Initialize superclass
-            this = this@mfs3.internal.AbstractLandareasMap(...
+            this = this@mfs3.AbstractLandareasMap(...
                 'mercator','europe2');
             % Initialize figure and axes
             this.initUI('Forward Link Budget Map')

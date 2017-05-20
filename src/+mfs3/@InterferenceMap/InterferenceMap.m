@@ -1,4 +1,4 @@
-classdef InterferenceMap < mfs3.internal.AbstractLandareasMap
+classdef InterferenceMap < mfs3.AbstractLandareasMap
 %INTERFERENCEMAP Map of multibeam FSS co-channel interference
 % Map of co-channel interference across user beams, calculated from typical
 % antenna patterns for multibeam satellite systems.
@@ -20,7 +20,7 @@ classdef InterferenceMap < mfs3.internal.AbstractLandareasMap
     methods
         function this = InterferenceMap(lonS,altS,thetaB,tblGrid,tblBeams)
             % Initialize superclass
-            this = this@mfs3.internal.AbstractLandareasMap(...
+            this = this@mfs3.AbstractLandareasMap(...
                 'mercator','europe2');
             % Initialize figure and axes
             this.initUI('Co-channel Interference Map')

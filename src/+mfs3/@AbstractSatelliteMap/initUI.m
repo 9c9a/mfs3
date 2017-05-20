@@ -6,7 +6,7 @@ function initUI(this,name)
 %   none
 
 % Initialize UI using superclass method
-initUI@mfs3.internal.AbstractMap(this,name)
+initUI@mfs3.AbstractMap(this,name)
 
 latLim = get(this.hA,'MapLatLimit');
 lonLim = get(this.hA,'MapLonLimit');

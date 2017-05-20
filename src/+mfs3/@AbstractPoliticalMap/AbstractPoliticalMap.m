@@ -1,4 +1,4 @@
-classdef (Abstract) AbstractPoliticalMap < mfs3.internal.AbstractMap
+classdef (Abstract) AbstractPoliticalMap < mfs3.AbstractMap
 %ABSTRACTPOLITICALMAP Base regional 2D map with political borders
 % Base abstract class that provides common functions for initializing a UI 
 % window and drawing a political map with world borders.
@@ -10,7 +10,7 @@ classdef (Abstract) AbstractPoliticalMap < mfs3.internal.AbstractMap
     methods
         function this = AbstractPoliticalMap(proj,region)
             % Initialize superclass
-            this = this@mfs3.internal.AbstractMap(proj,region);
+            this = this@mfs3.AbstractMap(proj,region);
         end
     end
     

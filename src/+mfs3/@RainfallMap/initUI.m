@@ -2,7 +2,7 @@ function initUI(this,name)
 %INITUI Initialize figure and axes with chosen projection
 
 % Initialize UI using call superclass method
-initUI@mfs3.internal.AbstractLandareasMap(this,name)
+initUI@mfs3.AbstractLandareasMap(this,name)
 % Change landareas color to improve visibility
 set(this.hL.Children,'FaceAlpha',0.6,'EdgeColor','k')
 

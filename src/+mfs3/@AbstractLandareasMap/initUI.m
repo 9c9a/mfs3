@@ -6,10 +6,10 @@ function initUI(this,name)
 %   none
 
 % Initialize UI using superclass method
-initUI@mfs3.internal.AbstractMap(this,name)
+initUI@mfs3.AbstractMap(this,name)
 
 %% Draw political borders overlay
-this.hL = geoshow('worldborders.shp',...
+this.hL = geoshow('landareas.shp',...
 	'FaceColor',[1 1 1]*0.9,'FaceAlpha',1,'EdgeColor','k');
 
 %% Position figure

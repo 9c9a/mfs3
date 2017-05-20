@@ -1,4 +1,4 @@
-classdef AttenuationMap < mfs3.internal.AbstractLandareasMap
+classdef AttenuationMap < mfs3.AbstractLandareasMap
 %ATTENUATIONMAP Map of multibeam FSS attenuation
 % Map of different types of ITU-R attenuations (rain, cloud & fog, …). Multiple 
 % probabilities can be selected through the UI.
@@ -33,7 +33,7 @@ classdef AttenuationMap < mfs3.internal.AbstractLandareasMap
     methods
         function this = AttenuationMap(lonS,altS,freq,tblGrid)
             % Initialize superclass
-            this = this@mfs3.internal.AbstractLandareasMap(...
+            this = this@mfs3.AbstractLandareasMap(...
                 'mercator','europe2');
             % Initialize figure and axes
             this.initUI('Attenuation Map')

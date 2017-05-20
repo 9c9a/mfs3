@@ -1,4 +1,4 @@
-classdef ReturnLinkMap < mfs3.internal.AbstractLandareasMap
+classdef ReturnLinkMap < mfs3.AbstractLandareasMap
 %RETURNLINKMAP Map of multibeam FSS return link budget
 % Map of different parameters relevant to the return link budget, such as 
 % carrier-to-noise and carrier-to-intermodulation ratios. Three possible 
@@ -38,7 +38,7 @@ classdef ReturnLinkMap < mfs3.internal.AbstractLandareasMap
                 lonS,altS,UL,DL,tblGrid,tblBeams,tblStations)
             
             % Initialize superclass
-            this = this@mfs3.internal.AbstractLandareasMap(...
+            this = this@mfs3.AbstractLandareasMap(...
                 'mercator','europe2');
             % Initialize figure and axes
             this.initUI('Return Link Budget Map')
