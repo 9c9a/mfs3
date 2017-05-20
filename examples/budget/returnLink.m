@@ -57,5 +57,5 @@ DL.B         = 50;    % [MHz]
 DL.Nc        = 8*4;   % [carriers]
 
 %% Link budget
-MapRL = mfs3.ReturnLinkMap(lonS,altS,UL,DL,tblGrid,tblBeams,tblStations);
+MapRL = mfs3.map.ReturnLinkMap(lonS,altS,UL,DL,tblGrid,tblBeams,tblStations);
 MapRL.draw()

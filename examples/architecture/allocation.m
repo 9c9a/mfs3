@@ -18,7 +18,7 @@ lonLimit = [-9 40];
 tblBeams = mfs3.allocate(lonS,altS,radius,latLimit,lonLimit,tilt);
 
 %% Generate map
-MapA = mfs3.MultibeamMap(radius,tilt,tblBeams);
+MapA = mfs3.map.MultibeamMap(radius,tilt,tblBeams);
 MapA.draw()
 
 %% Remove beams outside regions of interest

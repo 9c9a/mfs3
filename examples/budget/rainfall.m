@@ -19,5 +19,5 @@ lonLimit = [-25 55]; % [deg]
 tblGrid = mfs3.geogrid(lonS,altS,step,latLimit,lonLimit);
 
 %% Rainfall map
-MapR = mfs3.RainfallMap(tblGrid);
+MapR = mfs3.map.RainfallMap(tblGrid);
 MapR.draw()

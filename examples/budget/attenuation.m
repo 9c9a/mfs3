@@ -21,5 +21,5 @@ lonLimit = [-25 55]; % [deg]
 tblGrid = mfs3.geogrid(lonS,altS,step,latLimit,lonLimit);
 
 %% Attenuation
-MapA = mfs3.AttenuationMap(lonS,altS,freq,tblGrid);
+MapA = mfs3.map.AttenuationMap(lonS,altS,freq,tblGrid);
 MapA.draw()

@@ -29,9 +29,9 @@ tblGrid = mfs3.geogrid(lonS,altS,step,latLimit,lonLimit);
 tblGrid = mfs3.assign(tblGrid,tblBeams);
 
 %% Association of beams to grid points
-MapG = mfs3.GeogridMap(lonS,altS,radius,tilt,thetaB,tblGrid,tblBeams);
+MapG = mfs3.map.GeogridMap(lonS,altS,radius,tilt,thetaB,tblGrid,tblBeams);
 MapG.draw()
 
 %% Co-channel interference
-MapI = mfs3.InterferenceMap(lonS,altS,thetaB,tblGrid,tblBeams);
+MapI = mfs3.map.InterferenceMap(lonS,altS,thetaB,tblGrid,tblBeams);
 MapI.draw()

@@ -18,17 +18,17 @@ tblBeams = readtable(fullfile(pathB,fileB),'Sheet',sheet);
 tblStations = readtable(fullfile(pathS,fileS),'Sheet',sheet);
 
 %% Allocation of user beams
-MapA = mfs3.MultibeamMap(radius,tilt,tblBeams);
+MapA = mfs3.map.MultibeamMap(radius,tilt,tblBeams);
 MapA.draw()
 
 %% Frequency reuse
-MapF = mfs3.FrequencyMap(radius,tblBeams);
+MapF = mfs3.map.FrequencyMap(radius,tblBeams);
 MapF.draw()
 
 %% Gateway ground station locations
-MapS = mfs3.GroundStationMap(radius,tblStations);
+MapS = mfs3.map.GroundStationMap(radius,tblStations);
 MapS.draw()
 
 %% Allocation of beams to gateways
-MapG = mfs3.GatewayMap(radius,tblBeams,tblStations); 
+MapG = mfs3.map.GatewayMap(radius,tblBeams,tblStations); 
 MapG.draw()
