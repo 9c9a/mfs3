@@ -5,10 +5,11 @@ function draw(this)
 freq = unique(this.tblBeams.Frequency,'sorted');
 
 %% Assign colors to each frequency
-M = ceil(length(freq)/size(this.palette,1));
+N = length(freq);
+M = size(this.palette,1);
 
-color = repmat(this.palette,M,1);
-color = color(1:length(freq),:);
+color = repmat(this.palette,floor(N/M),1);
+color = vertcat(color,this.palette(1:mod(N,M),:));
 
 %% Clear map before redrawing
 this.clear()

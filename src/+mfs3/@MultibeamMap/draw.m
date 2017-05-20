@@ -7,11 +7,12 @@ num = this.tblBeams.Number;
 lat = this.tblBeams.Lat;
 lon = this.tblBeams.Lon;
 
-%% Assign different colors
-M = ceil(length(num)/size(this.palette,1));
+%% Assign colors to each beam
+N = length(num);
+M = size(this.palette,1);
 
-color = repmat(this.palette,M,1);
-color = color(1:length(num),:);
+color = repmat(this.palette,floor(N/M),1);
+color = vertcat(color,this.palette(1:mod(N,M),:));
 
 %% Clear map before redrawing
 this.clear()

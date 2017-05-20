@@ -7,10 +7,11 @@ gate = unique(this.tblBeams.Gateway,'sorted');
 stat = this.tblStations.Number;
 
 %% Assign colors to each gateway
-M = ceil(length(gate)/size(this.palette,1));
+N = length(gate);
+M = size(this.palette,1);
 
-color = repmat(this.palette,M,1);
-color = color(1:length(gate),:);
+color = repmat(this.palette,floor(N/M),1);
+color = vertcat(color,this.palette(1:mod(N,M),:));
 
 %% Clear map before redrawing
 this.clear()
