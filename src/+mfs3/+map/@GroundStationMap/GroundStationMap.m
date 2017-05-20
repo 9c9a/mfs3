@@ -13,7 +13,7 @@ classdef GroundStationMap < mfs3.map.AbstractPoliticalMap
     methods
         function this = GroundStationMap(radius,tblStations)
             % Initialize superclass
-            this = this@mfs3.map.AbstractPoliticalMap('mercator','europe1');
+            this = this@mfs3.map.AbstractPoliticalMap('mercator','europe');
             % Initialize figure and axes
             this.initUI('Ground Station Locations Map')
             

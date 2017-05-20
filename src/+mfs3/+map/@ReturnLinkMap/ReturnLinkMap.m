@@ -39,7 +39,7 @@ classdef ReturnLinkMap < mfs3.map.AbstractLandareasMap
             
             % Initialize superclass
             this = this@mfs3.map.AbstractLandareasMap(...
-                'mercator','europe2');
+                'mercator','europe');
             % Initialize figure and axes
             this.initUI('Return Link Budget Map')
 

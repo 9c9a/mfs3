@@ -14,7 +14,7 @@ classdef GatewayMap < mfs3.map.AbstractLandareasMap
     methods
         function this = GatewayMap(radius,tblBeams,tblStations)
             % Initialize superclass
-            this = this@mfs3.map.AbstractLandareasMap('mercator','europe1');
+            this = this@mfs3.map.AbstractLandareasMap('mercator','europe');
             % Initialize figure and axes
             this.initUI('User Beam to Gateway Allocation Map')
             

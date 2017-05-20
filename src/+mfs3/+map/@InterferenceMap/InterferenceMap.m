@@ -21,7 +21,7 @@ classdef InterferenceMap < mfs3.map.AbstractLandareasMap
         function this = InterferenceMap(lonS,altS,thetaB,tblGrid,tblBeams)
             % Initialize superclass
             this = this@mfs3.map.AbstractLandareasMap(...
-                'mercator','europe2');
+                'mercator','europe');
             % Initialize figure and axes
             this.initUI('Co-channel Interference Map')
             

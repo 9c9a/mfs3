@@ -17,7 +17,7 @@ classdef MultibeamMap < mfs3.map.AbstractLandareasMap
         function this = MultibeamMap(radius,tilt,tblBeams)
             % Initialize superclass
             this = this@mfs3.map.AbstractLandareasMap(...
-                'mercator','europe1');
+                'mercator','europe');
             % Initialize figure and axes
             this.initUI('User Beam Allocation Map')
             

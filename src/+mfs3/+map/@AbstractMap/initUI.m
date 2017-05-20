@@ -15,19 +15,18 @@ this.hA = axesm(this.proj,'Geoid',this.geoid);
 gridm on; framem on; mlabel on; plabel on; axis off
 
 %% Set map limits according to region
-switch this.region
-    case 'world'
-        setm(this.hA,'MapLatLimit',[-90 90],'MapLonLimit',[-180 180])
-        setm(this.hA,'MLineLocation',45,'MLabelLocation',45)
-        setm(this.hA,'PLineLocation',45,'PLabelLocation',45)
-    case 'europe1'
-        setm(this.hA,'MapLatLimit',[25 75],'MapLonLimit',[-30 60])
-        setm(this.hA,'MLineLocation',15,'MLabelLocation',30)
-        setm(this.hA,'PLineLocation',15,'PLabelLocation',15)
-    case 'europe2'
-        setm(this.hA,'MapLatLimit',[30 70],'MapLonLimit',[-25 55])
-        setm(this.hA,'MLineLocation',10,'MLabelLocation',10)
-        setm(this.hA,'PLineLocation',10,'PLabelLocation',10)
-    otherwise
-        error('Unknown map region: ''%s''',this.region)
+pathstr = fileparts(mfilename('fullpath'));
+% Read supported regions from JSON file 'regions.json'
+json = fileread(fullfile(pathstr,'../','regions.json'));
+json = jsondecode(json);
+
+if ~isfield(json,this.region)
+    error('Unknown map region: ''%s''',this.region)
+end
+
+% Apply all parameters specified for this region
+% Should probably add some constraints to which fields are allowed
+fields = fieldnames(json.(this.region));
+for n=1:length(fields)
+    setm(this.hA,fields{n},json.(this.region).(fields{n}))
 end

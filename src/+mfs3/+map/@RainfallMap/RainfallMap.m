@@ -29,7 +29,7 @@ classdef RainfallMap < mfs3.map.AbstractLandareasMap
         function this = RainfallMap(tblGrid)
             % Initialize superclass
             this = this@mfs3.map.AbstractLandareasMap(...
-                'mercator','europe2');
+                'mercator','europe');
             % Initialize figure and axes
             this.initUI('Rainfall, Cloud Water & Vapor Map')
             

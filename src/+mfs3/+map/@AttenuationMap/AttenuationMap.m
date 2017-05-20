@@ -34,7 +34,7 @@ classdef AttenuationMap < mfs3.map.AbstractLandareasMap
         function this = AttenuationMap(lonS,altS,freq,tblGrid)
             % Initialize superclass
             this = this@mfs3.map.AbstractLandareasMap(...
-                'mercator','europe2');
+                'mercator','europe');
             % Initialize figure and axes
             this.initUI('Attenuation Map')
             

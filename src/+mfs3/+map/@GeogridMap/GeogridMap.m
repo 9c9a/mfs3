@@ -35,7 +35,7 @@ classdef GeogridMap < mfs3.map.AbstractLandareasMap
                 lonS,altS,radius,tilt,thetaB,tblGrid,tblBeams)
             % Initialize superclass
             this = this@mfs3.map.AbstractLandareasMap(...
-                'mercator','europe2');
+                'mercator','europe');
             % Initialize figure and axes
             this.initUI('Association of Beams to Grid Points Map')
             
