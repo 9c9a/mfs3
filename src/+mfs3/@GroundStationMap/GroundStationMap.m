@@ -1,4 +1,4 @@
-classdef GroundStationMap < mfs3.AbstractLandareasMap
+classdef GroundStationMap < mfs3.AbstractPoliticalMap
 %GROUNDSTATIONMAP Map of multibeam FSS ground station locations
 % Map of gateway ground station locations and satellite gateway beams.
 
@@ -13,8 +13,7 @@ classdef GroundStationMap < mfs3.AbstractLandareasMap
     methods
         function this = GroundStationMap(radius,tblStations)
             % Initialize superclass
-            this = this@mfs3.AbstractLandareasMap(...
-                'mercator','europe1');
+            this = this@mfs3.AbstractPoliticalMap('mercator','europe1');
             % Initialize figure and axes
             this.initUI('Ground Station Locations Map')
             
