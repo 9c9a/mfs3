@@ -9,7 +9,8 @@ function initUI(this,name)
 initUI@mfs3.AbstractMap(this,name)
 
 %% Draw political borders overlay
-this.hL = geoshow('worldborders.shp',...
+pathstr = fileparts(mfilename('fullpath'));
+this.hL = geoshow(fullfile(pathstr,'worldborders.shp'),...
 	'FaceColor',[1 1 1]*0.9,'FaceAlpha',1,'EdgeColor','k');
 
 %% Position figure
