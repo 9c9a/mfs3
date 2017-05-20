@@ -17,7 +17,7 @@ this.clear()
 %% Plot user beams assigned to each frequency
 hobj = gobjects(size(freq));
 for n=1:length(freq)
-    [idB,hC,hT] = this.addFrequency(freq(n),color(n,:),0.4);
+    [idB,hC,hT] = this.addFrequency(freq(n),color(n,:),0.6);
     this.tblBeams.Handle(idB,:) = horzcat(hC,hT);
     
     hobj(n) = hC(1);

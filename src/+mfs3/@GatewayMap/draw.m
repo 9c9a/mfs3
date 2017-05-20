@@ -19,7 +19,7 @@ this.clear()
 %% Plot user beams assigned to each gateway
 hobj = gobjects(size(gate));
 for n=1:length(gate)
-    [idB,hC,hT] = this.addGateway(gate(n),color(n,:),0.4);
+    [idB,hC,hT] = this.addGateway(gate(n),color(n,:),0.6);
     this.tblBeams.Handle(idB,:) = horzcat(hC,hT);
     
     hobj(n) = hC(1);

@@ -7,10 +7,12 @@ function initUI(this,name)
 
 % Initialize UI using superclass method
 initUI@mfs3.AbstractMap(this,name)
+% Change background color to dark gray
+setm(this.hA,'FFaceColor',[1 1 1]*0.6)
 
-%% Draw political borders overlay
+%% Draw geographical areas overlay
 this.hL = geoshow('landareas.shp',...
-	'FaceColor',[1 1 1]*0.9,'FaceAlpha',1,'EdgeColor','k');
+	'FaceColor',[1 1 1]*0.97,'EdgeColor',[1 1 1]*0.4);
 
 %% Position figure
 % Move figure to the center of the screen

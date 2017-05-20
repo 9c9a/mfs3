@@ -22,8 +22,8 @@ hC = gobjects(size(gate));
 hT = hC;
 
 for n=1:length(gate)
-    hC(n) = this.addCircle(lat0(n),lon0(n),this.radius,color(n,:),0.4);
-    hT(n) = this.addLabel(lat0(n),lon0(n),num2str(gate(n)),color(n,:));
+    hC(n) = this.addCircle(lat0(n),lon0(n),this.radius,color(n,:),0.6);
+    hT(n) = this.addLabel(lat0(n),lon0(n),num2str(gate(n)),color(n,:)*0.6);
     % Update map at constant framerate
     drawnow limitrate
 end

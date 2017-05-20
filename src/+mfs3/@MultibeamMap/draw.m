@@ -23,8 +23,8 @@ hT = hH;
 
 for n=1:length(num)
     hH(n) = this.addHexagon(...
-        lat(n),lon(n),this.radius,this.tilt,color(n,:),0.4);
-    hT(n) = this.addLabel(lat(n),lon(n),num2str(num(n)),color(n,:));
+        lat(n),lon(n),this.radius,this.tilt,color(n,:),0.6);
+    hT(n) = this.addLabel(lat(n),lon(n),num2str(num(n)),color(n,:)*0.6);
     % Update map at constant framerate
     drawnow limitrate
 end

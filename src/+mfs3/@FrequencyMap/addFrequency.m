@@ -17,7 +17,7 @@ hT = hC;
 
 for n=1:length(idB)
     hC(n) = this.addCircle(lat(n),lon(n),this.radius,color,alpha);
-    hT(n) = this.addLabel(lat(n),lon(n),num2str(num(n)),color);
+    hT(n) = this.addLabel(lat(n),lon(n),num2str(num(n)),color*0.6);
     % Update map at constant framerate
     drawnow limitrate
 end
