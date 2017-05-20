@@ -9,14 +9,7 @@ function initUI(this,name)
 this.hF = figure('Visible','off','Name',name);
 
 %% Create map axes
-switch this.proj
-    case 'mercator'
-        this.hA = axesm('mercator','Geoid',this.geoid);
-    case 'robinson'
-        this.hA = axesm('robinson','Geoid',this.geoid);
-    otherwise
-        error('Unknown map projection: ''%s''',this.proj)
-end
+this.hA = axesm(this.proj,'Geoid',this.geoid);
 
 % Enable grid, frame and labels. Disable axis
 gridm on; framem on; mlabel on; plabel on; axis off
