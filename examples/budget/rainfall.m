@@ -4,7 +4,7 @@ clear all
 
 %% Inputs
 % Satellite coordinates
-lonS = 9;     % [deg]
+lonS = 20;     % [deg]
 altS = 36000; % [km]
 % Spreadsheet name
 sheet = 'Ka band';
@@ -13,8 +13,8 @@ sheet = 'Ka band';
 % Step size
 step = 0.5;   % [deg]
 % Region
-latLimit = [30 70];  % [deg]
-lonLimit = [-25 55]; % [deg]
+latLimit = [20 70];  % [deg]
+lonLimit = [-40 80]; % [deg]
 
 tblGrid = mfs3.geogrid(lonS,altS,step,latLimit,lonLimit);
 
