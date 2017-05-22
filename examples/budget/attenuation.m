@@ -1,10 +1,14 @@
 %ATTENUATION Multibeam FSS attenuation map
 close all
-clear all
+clear
+
+%% Path
+% Add mfs3 and required libraries to the path
+addpath('../../src','../../lib/tropos/src')
 
 %% Inputs
 % Satellite coordinates
-lonS = 20;     % [deg]
+lonS = 20;    % [deg]
 altS = 36000; % [km]
 % Frequency
 freq = 20.2;  % [GHz]

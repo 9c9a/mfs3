@@ -1,10 +1,14 @@
 %INTERFERENCE Multibeam FSS co-channel interference map
 close all
-clear all
+clear
+
+%% Path
+% Add mfs3 and required libraries to the path
+addpath('../../src','../../lib/tropos/src')
 
 %% Inputs
 % Satellite coordinates
-lonS = 9;      % [deg]
+lonS = 20;    % [deg]
 altS = 36000;  % [km]
 % Satellite beamwidth
 thetaB = 0.65; % [deg]

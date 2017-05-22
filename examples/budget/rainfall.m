@@ -1,10 +1,14 @@
 %RAINFALL Rainfall rate, cloud water content & vapor density map
 close all
-clear all
+clear
+
+%% Path
+% Add mfs3 and required libraries to the path
+addpath('../../src','../../lib/tropos/src')
 
 %% Inputs
 % Satellite coordinates
-lonS = 20;     % [deg]
+lonS = 20;    % [deg]
 altS = 36000; % [km]
 % Spreadsheet name
 sheet = 'Ka band';

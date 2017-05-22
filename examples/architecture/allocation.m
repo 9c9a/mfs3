@@ -1,10 +1,14 @@
 %ALLOCATION Optimal allocation of multibeam FSS user beam centers
 close all
-clear all
+clear
+
+%% Path
+% Add mfs3 and required libraries to the path
+addpath('../../src')
 
 %% Inputs
 % Satellite coordinates
-lonS = 9;     % [deg]
+lonS = 20;    % [deg]
 altS = 36000; % [km]
 % User beam radius
 radius = 250; % [km]
