@@ -37,4 +37,10 @@ MapA.hide([101,107:110,114:120,123:128,131:135])
 % Does not clear previous values from an existing table, remove/rename
 % the spreadsheet manually or use a different filename
 [fileB,pathB] = uiputfile('*.xlsx','Save beam allocation table as');
-MapA.writeTable(fileB,pathB)
+
+% Find beams that have not been hidden
+hB = MapA.tblBeams.Handle;
+iB = strcmp(get(hB(:,1),'Visible'),'on');
+
+% Write to spreadsheet
+writetable(tblBeams(iB,:),fullfile(pathB,fileB))
