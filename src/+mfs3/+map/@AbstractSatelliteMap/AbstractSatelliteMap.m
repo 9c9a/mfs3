@@ -10,7 +10,7 @@ classdef (Abstract) AbstractSatelliteMap < mfs3.map.AbstractMap
     methods
         function this = AbstractSatelliteMap(proj,region)
             % Initialize superclass
-            this = this@mfs3.map.AbstractMap(proj,region);w
+            this = this@mfs3.map.AbstractMap(proj,region);
         end
     end
     
