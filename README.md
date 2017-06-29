@@ -4,13 +4,13 @@ Graphical simulator in [MATLAB®](http://www.mathworks.com/products/matlab/) tha
 
 
 ## Functions
-**mfs3** can generate different graphical presentations of relevant system design parameters on a map of a defined geographical region of interest.
+**mfs3** can generate relevant graphical presentations of system parameters on a map of a defined geographical region of interest.
 
 | <img src="docs/freqplan.png" height="270px"> | <img src="docs/rainatt.png" height="270px"> |
 |:----------------------------------:|:---------------------------------------:|
 | Frequency/polarization reuse plan. | Attenuation due to rainfall in Ka band. |
 
-Different maps related to the architecture and frequency plan of the system can be produced, including:
+Different maps related to the architecture and frequency plan of the communications system can be produced, including the following:
 - Coverage region and user beam center locations.
 - Gateway ground station locations.
 - Allocation of user beams to gateway stations.
