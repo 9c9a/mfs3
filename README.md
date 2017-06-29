@@ -1,10 +1,30 @@
 # Multibeam Fixed-Satellite Service Simulator
 
-Graphical simulator in [MATLAB®](http://www.mathworks.com/products/matlab/) that aims to assist in the design (ground segment architecture, frequency reuse plan, link budget calculations, ...) of a fixed-satellite service with multibeam coverage over Europe.
+Graphical simulator in [MATLAB®](http://www.mathworks.com/products/matlab/) that aims to assist in the design of a multibeam satellite communications system to provide broadband fixed-satellite service in Europe.
 
-| <img src="examples/frequency.png" height="270px"> | <img src="examples/attenuation.png" height="270px"> |
-|:-------------------------------------------------:|:---------------------------------------------------:|
-| Frequency reuse plan.                             | Attenuation due to rainfall.                        |
+
+## Functions
+**mfs3** can generate different graphical presentations of relevant system design parameters on a map of a defined geographical region of interest.
+
+| <img src="docs/freqplan.png" height="270px"> | <img src="docs/rainatt.png" height="270px"> |
+|:----------------------------------:|:---------------------------------------:|
+| Frequency/polarization reuse plan. | Attenuation due to rainfall in Ka band. |
+
+Different maps related to the architecture and frequency plan of the system can be produced, including:
+- Coverage region and user beam center locations.
+- Gateway ground station locations.
+- Allocation of user beams to gateway stations.
+- Frequency/polarization reuse plan across user beams.
+
+The simulator can also perform link budget calculations on a large coordinate grid. Maps can be generated for different magnitudes involved in the budget, such as:
+- Attenuation (due to free-space path loss, rainfall, clouds/fog and atmospheric gases).
+- Co-channel interference levels in user beams.
+- Carrier to noise (C/N), interference (C/I) and intermodulation (C/IM) ratios.
+
+
+## Examples
+Some [example scripts](examples) are provided that demonstrate the different functions supported by the simulator.
+
 
 ## About
 This software was developed as part of a course in Satellite Communications at the [Polytechnic University of Madrid](http://www.upm.es), for a project titled “**Design of a multibeam satellite for Europe (FSS):** Comparison of performance with Ka vs Q/V feeder links”.
