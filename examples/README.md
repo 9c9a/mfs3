@@ -4,7 +4,7 @@ These scripts are meant to provide examples demonstrating different functions su
 
 
 ## Scripts
-The scripts are grouped in two subfolders according to the type of information presented.
+The scripts are grouped in two subfolders according to the type of information that is presented.
 
 ### Architecture
 Examples of maps related to the architecture of the satellite communications system, including frequency reuse and ground segment maps.
@@ -17,7 +17,7 @@ Examples of maps related to the architecture of the satellite communications sys
 
 
 ### Link budget
-Examples of maps of different parameters involved in the calculation of the link budget, such as attenuation, interference and carrier-to-noise maps.
+Examples of maps of different parameters involved in the calculation of the link budget, such as attenuation, interference and carrier-to-noise ratio.
 
 | Script | Description |
 |--------|-------------|
@@ -31,9 +31,9 @@ Examples of maps of different parameters involved in the calculation of the link
 ## Information tables
 **mfs3** uses [tables](https://www.mathworks.com/help/matlab/tables.html) to store the definitions of the ground segment architecture and the frequency reuse plan, including the locations of user beam centers, their allocation to gateway stations and the assigned frequency/polarization.
 
-There are two tables with sample data that are provided as Microsoft Excel Workbooks (*.xlsx):
+Two tables with sample data are provided together with this document as Microsoft Open XML Spreadsheets:
 
-| Workbook | Description |
+| Filename | Description |
 |----------|-------------|
-| [`beams.xlsx`](examples/beams.xlsx) | User beam information table. Specifies the coordinates of user beam centers, their assigned frequency/polarization and allocated gateway. |
-| [`gateways.xlsx`](examples/gateways.xlsx) | Gateway ground station table. Contains the coordinates for gateway ground stations. |
+| [`beams.xlsx`](beams.xlsx) | User beam information table. Specifies the coordinates of user beam centers, their assigned frequency/polarization and allocated gateway. |
+| [`gateways.xlsx`](gateways.xlsx) | Gateway ground station table. Contains the coordinates for gateway ground stations. |
